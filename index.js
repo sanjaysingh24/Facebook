@@ -51,7 +51,7 @@ const User = mongoose.model('User',userschema);
 passport.use(new FacebookStrategy({
     clientID: process.env.CLIENTID,
     clientSecret: process.env.SECRET,
-    callbackURL: "http://localhost:4000/auth/facebook/callback"
+    callbackURL: "https://facebook-aw83.onrender.com/auth/facebook/callback"
   },
  async function(accessToken, refreshToken, profile, cb) {
    const user =await User.findOne({
