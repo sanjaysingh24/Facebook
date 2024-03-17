@@ -32,7 +32,7 @@ main().catch((err)=>{
 
 //connect mongodb
 async function main(){
-    await mongoose.connect("mongodb://localhost:27017/Facebook");
+    await mongoose.connect(`${process.env.MONGODB}`);
     console.log("connect successfully");
 }
 
